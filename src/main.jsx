@@ -8,12 +8,19 @@ import {
 import "./index.css";
 import Root from './Root';
 import ErrorPage from './Error';
+import Contact from './Contact';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root/>,
-    errorElement:<ErrorPage/>
+    errorElement:<ErrorPage/>,
+    children:[
+      {
+        path:'/contacts/:contactID',
+        element:<Contact/>
+      }
+    ]
   },
 
 ])
