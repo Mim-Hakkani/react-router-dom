@@ -6,16 +6,16 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
+import Root from './Root';
+import ErrorPage from './Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Root/>,
+    errorElement:<ErrorPage/>
   },
-  {
-    path:'/about',
-    element:<h2>This is about page...</h2>
-  }
+
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
